@@ -8,13 +8,13 @@ public class MultiplyBinary {
         System.out.print("Enter a number: ");
         String binary1 = input.nextLine();
         while(!isValidBinary(binary1)) {
-            System.out.print("Enter a number: ");
+            System.out.print("Invalid input. Please enter a valid binary number: ");
             binary1 = input.nextLine();
         }
         System.out.print("Enter a number: ");
         String binary2 = input.nextLine();
         while(!isValidBinary(binary2)) {
-            System.out.print("Enter a number: ");
+            System.out.print("Invalid input. Please enter a valid binary number: ");
             binary2 = input.nextLine();
         }
 
