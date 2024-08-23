@@ -10,7 +10,7 @@ public class MiddleChar {
         if (value.isEmpty()) {
             System.out.println("The string is empty.");
         } else {
-            System.out.print("The middle character in the string: " + middle(value)+"\n");
+            System.out.println("The middle character in the string: " + middle(value));
         }
     }
 
