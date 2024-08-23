@@ -44,9 +44,9 @@ public class Student_v2 {
     }
 
     public void printDetails(){
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("Gender: " + gender);
-        System.out.println("Major: " + major);
+        System.out.println("Name: " + getName());
+        System.out.println("Age: " + getAge());
+        System.out.println("Gender: " + getGender());
+        System.out.println("Major: " + getMajor());
     }
 }
