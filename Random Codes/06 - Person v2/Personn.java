@@ -1,10 +1,10 @@
-public class Cat {
+public class Personn {
     String name;
     int age;
 
-    public Cat() {
-        name = "Arya";
-        age = 6;
+    public Personn(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
     public void printDetails(){
