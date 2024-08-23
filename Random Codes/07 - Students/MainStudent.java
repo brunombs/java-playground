@@ -1,5 +1,3 @@
-// Encapsulamento
-
 public class MainStudent {
     public static void main(String[] args) {
         Student_v2 alice = new Student_v2("Alice", 21, "female", "chemistry");
