@@ -8,21 +8,16 @@ public class Vowels {
         System.out.print("Enter a string: ");
         String inputString = input.nextLine();
 
-        int vowelCount = countVowels(inputString);
-        System.out.println("Number of vowels in the string: " + vowelCount);
-    }
+        String vowelSet = "aeiouAEIOU";
+        int vowelCount = 0;
 
-    public static int countVowels(String str) {
-        String vowels = "aeiouAEIOU";
-        int count = 0;
-
-        for (int i = 0; i < str.length(); i++) {
-            char ch = str.charAt(i);
-            if (vowels.indexOf(ch) != -1) {
-                count++;
+        for (int index = 0; index < inputString.length(); index++) {
+            char currentChar = inputString.charAt(index);
+            if (vowelSet.indexOf(currentChar) != -1) {
+                vowelCount++;
             }
         }
 
-        return count;
+        System.out.println("Number of vowels: " + vowelCount);
     }
 }
