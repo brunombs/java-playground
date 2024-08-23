@@ -7,7 +7,11 @@ public class MiddleChar {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter a string: ");
         String value = input.nextLine();
-        System.out.print("The middle character in the string: " + middle(value)+"\n");
+        if (value.isEmpty()) {
+            System.out.println("The string is empty.");
+        } else {
+            System.out.print("The middle character in the string: " + middle(value)+"\n");
+        }
     }
 
     public static String middle(String value) {
