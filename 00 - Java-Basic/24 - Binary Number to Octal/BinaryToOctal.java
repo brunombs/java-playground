@@ -9,6 +9,6 @@ public class BinaryToOctal {
         String binary = input.nextLine();
         int decimal = Integer.parseInt(binary, 2);
         String octal = Integer.toOctalString(decimal);
-        System.out.println(octal);
+        System.out.println("The binary number is: " + binary + " and the octal number is: " + octal);
     }
 }
