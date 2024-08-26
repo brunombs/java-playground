@@ -6,14 +6,15 @@ public class MainBook {
         Book book2 = new Book("Clean Code", "Robert C. Martin");
         Book book3 = new Book("The Pragmatic Programmer", "David Thomas and Andrew Hunt", 393.08);
 
-        System.out.println("Book 1 Title: " + book1.title);
-        System.out.println("Book 1 Author: " + book1.author);
-        System.out.println("Book 1 Title: " + book1.price);
-        System.out.println("Book 2 Title: " + book2.title);
-        System.out.println("Book 2 Title: " + book2.author);
-        System.out.println("Book 2 Title: " + book2.price);
-        System.out.println("Book 3 Title: " + book3.title);
-        System.out.println("Book 3 Title: " + book3.author);
-        System.out.println("Book 3 Title: " + book3.price);
+        printBookDetails("Book 1", book1);
+        printBookDetails("Book 2", book2);
+        printBookDetails("Book 3", book3);
+    }
+
+    private static void printBookDetails(String label, Book book) {
+        System.out.println("Book Title: " + book.title);
+        System.out.println("Author: " + book.author);
+        System.out.println("Price: R$" + book.price);
+        System.out.println();
     }
 }
