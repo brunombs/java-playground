@@ -2,7 +2,7 @@ public class Movies_v2 {
     private String title;
     private int year;
 
-    Movies_v2(String title, int year) {
+    public Movies_v2(String title, int year) {
         this.title = title;
         this.year = year;
     }
