@@ -4,9 +4,9 @@ import java.util.Scanner;
 public class CheckNegativeOrPositive {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter an integer: ");
         while (true){
             try {
+                System.out.print("Enter an integer: ");
                 int firstNumber = input.nextInt();
                 if (firstNumber < 0){
                     System.out.println("Negative number");
