@@ -1,3 +1,5 @@
+// Write a Java program to create an enum called "Weekend" with constants representing the days of the weekend.
+
 public class Weekend {
     public static void main(String[] args) {
         Weekendd day1 = Weekendd.SATURDAY;
