@@ -1,3 +1,5 @@
+// Write a Java program that defines an enum called "Months" with constants representing the months of the year.
+
 public class Monthss {
     public static void main(String[] args) {
         int index = 0;
