@@ -11,7 +11,7 @@ public class BasicAndRandom {
             System.out.print("Enter a number between 1 and 100: ");
             try {
                 firstNumber = input.nextInt();
-                if (firstNumber >= 1 && firstNumber <= 100) {
+                if (isValidRange(firstNumber)) {
                     break;
                 } else {
                     System.out.println("Please enter a number between 1 and 100.");
@@ -26,7 +26,7 @@ public class BasicAndRandom {
             System.out.print("Enter another number between 1 and 100: ");
             try {
                 secondNumber = input.nextInt();
-                if (secondNumber >= 1 && secondNumber <= 100) {
+                if (isValidRange(secondNumber)) {
                     break;
                 } else {
                     System.out.println("Please enter a number between 1 and 100.");
@@ -44,5 +44,10 @@ public class BasicAndRandom {
         } else {
             System.out.println(firstNumber + " is equal to " + secondNumber);
         }
+
+    }
+
+    public static boolean isValidRange(int number) {
+        return number >= 1 && number <= 100;
     }
 }
