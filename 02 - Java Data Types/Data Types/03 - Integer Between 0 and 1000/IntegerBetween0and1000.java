@@ -1,3 +1,5 @@
+// Write a Java program that reads an integer between 0 and 1000 and adds all the digits in the integer.
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
