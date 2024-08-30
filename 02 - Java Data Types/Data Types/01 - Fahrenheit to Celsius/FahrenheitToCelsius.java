@@ -1,3 +1,5 @@
+// Write a Java program to convert temperature from Fahrenheit to Celsius degrees.
+
 import java.util.Scanner;
 
 public class FahrenheitToCelsius {
