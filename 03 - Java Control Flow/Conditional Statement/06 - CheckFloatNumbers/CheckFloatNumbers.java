@@ -1,3 +1,5 @@
+// Write a Java program that reads two floating-point numbers and tests whether they are the same up to three decimal places.
+
 import java.util.Scanner;
 
 public class CheckFloatNumbers {
