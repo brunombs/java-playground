@@ -1,25 +1,25 @@
 public class Moto {
-    private String marca;
-    private String modelo;
+    private String brand;
+    private String model;
 
-    public String getMarca() {
-        return marca;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
-    public String getModelo() {
-        return modelo;
+    public String getModel() {
+        return model;
     }
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
+    public void setModel(String model) {
+        this.model = model;
     }
 
-    public Moto(String marca, String modelo) {
-        this.marca = marca;
-        this.modelo = modelo;
+    public Moto(String brand, String model) {
+        this.brand = brand;
+        this.model = model;
     }
 }
