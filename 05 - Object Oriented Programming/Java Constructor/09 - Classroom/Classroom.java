@@ -19,7 +19,10 @@ public class Classroom {
 
     public static void main(String[] args) {
         String[] studentArray = {"Bruno", "Aline", "Julia"};
+        String[] studentsOfPython = {"Bruno", "Theodoro", "Lucas"};
         Classroom c1 = new Classroom("Java Constructors", studentArray);
+        Classroom c2 = new Classroom("Python 2", studentsOfPython);
         c1.Print();
+        c2.Print();
     }
 }
