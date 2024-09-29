@@ -1,20 +1,20 @@
 public class Car {
-    private String brand;
+    private String make;
     private String model;
     private int year;
 
-    public Car(String brand, String model, int year) {
-        this.brand = brand;
+    public Car(String make, String model, int year) {
+        this.make = make;
         this.model = model;
         this.year = year;
     }
 
-    public String getBrand() {
-        return brand;
+    public String getMake() {
+        return make;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
+    public void setMake(String make) {
+        this.make = make;
     }
 
     public String getModel() {
@@ -34,7 +34,7 @@ public class Car {
     }
 
     public void exibirDetalhes(Car car) {
-        System.out.println("Marca: " + car.getBrand());
+        System.out.println("Marca: " + car.getMake());
         System.out.println("Modelo: " + car.getModel());
         System.out.println("Ano: " + car.getYear());
     }
@@ -45,7 +45,7 @@ public class Car {
         myCar.exibirDetalhes(myCar);
 
         myCar.setYear(2015);
-        myCar.setBrand("Toyota");
+        myCar.setMake("Toyota");
         myCar.setModel("SW4");
 
         myCar.exibirDetalhes(myCar);
