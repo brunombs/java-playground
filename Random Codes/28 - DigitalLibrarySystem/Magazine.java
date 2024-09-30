@@ -1,5 +1,5 @@
 public class Magazine extends Media{
-    private int issueNumber;
+    private final int issueNumber;
 
     public Magazine(String title, int year, int issueNumber) {
         super(title, year);
