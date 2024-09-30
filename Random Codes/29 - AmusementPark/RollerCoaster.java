@@ -1,5 +1,5 @@
 public class RollerCoaster extends Attraction {
-    private int speed;
+    private final int speed;
     public RollerCoaster(String name, int capacity, int duration, int speed) {
         super(name, capacity, duration);
         this.speed = speed;
