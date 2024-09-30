@@ -5,6 +5,6 @@ public class Refrigerator extends Appliance{
 
     @Override
     public void turnOn() {
-        System.out.println("Refrigerator is now on.");
+        System.out.println("Refrigerator (" + getBrand() + ") is now on.");
     }
 }

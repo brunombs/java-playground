@@ -5,5 +5,9 @@ public abstract class Appliance {
         this.brand = brand;
     }
 
+    public String getBrand() {
+        return brand;
+    }
+
     public abstract void turnOn();
 }

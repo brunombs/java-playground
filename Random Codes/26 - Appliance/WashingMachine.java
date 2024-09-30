@@ -5,6 +5,6 @@ public class WashingMachine extends Appliance {
 
     @Override
     public void turnOn() {
-        System.out.println("Washing machine is now on");
+        System.out.println("Washing (" + getBrand() + ")" + " machine is now on");
     }
 }
