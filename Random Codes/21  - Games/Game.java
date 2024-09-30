@@ -1,7 +1,7 @@
-public class Games {
+public class Game {
     String name;
 
-    public Games(String name){
+    public Game(String name){
         this.name = name;
     }
 
@@ -18,8 +18,8 @@ public class Games {
     }
 
     public static void main(String[] args) {
-        Games game1 = new Games("Tibia");
-        Games game2 = new Games("LOL");
+        Game game1 = new Game("Tibia");
+        Game game2 = new Game("LOL");
 
         System.out.println(game1.getName());
         System.out.println(game2.getName());
