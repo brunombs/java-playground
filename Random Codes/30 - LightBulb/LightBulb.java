@@ -1,17 +1,17 @@
 public class LightBulb {
     String cor;
-    boolean acesa = false;
+    boolean lit = false;
 
     public LightBulb(String cor) {
         this.cor = cor;
     }
 
     public void turnOn(){
-        acesa = true;
+        lit = true;
     }
 
     public void turnOff(){
-        acesa = false;
+        lit = false;
     }
 
     public String getCor() {
@@ -19,7 +19,7 @@ public class LightBulb {
     }
 
     public boolean isOn() {
-        return acesa;
+        return lit;
     }
 
     public static void main(String[] args) {
