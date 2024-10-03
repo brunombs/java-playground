@@ -2,9 +2,8 @@ public class LightBulb {
     String cor;
     boolean acesa = false;
 
-    public LightBulb(String cor, boolean on) {
+    public LightBulb(String cor) {
         this.cor = cor;
-        this.acesa = acesa;
     }
 
     public void turnOn(){
@@ -24,10 +23,11 @@ public class LightBulb {
     }
 
     public static void main(String[] args) {
-        LightBulb lightBulb = new LightBulb("Branco", false);
+        LightBulb lightBulb = new LightBulb("Branco");
         System.out.println(lightBulb.isAcesa());
         lightBulb.turnOn();
         System.out.println(lightBulb.getCor());
         System.out.println(lightBulb.isAcesa());
+        lightBulb.turnOff();
     }
 }
