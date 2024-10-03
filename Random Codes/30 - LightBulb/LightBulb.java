@@ -24,10 +24,10 @@ public class LightBulb {
 
     public static void main(String[] args) {
         LightBulb lightBulb = new LightBulb("Branco");
-        System.out.println(lightBulb.isAcesa());
+        System.out.println("Is the light on? : " + lightBulb.isAcesa());
         lightBulb.turnOn();
         System.out.println(lightBulb.getCor());
-        System.out.println(lightBulb.isAcesa());
+        System.out.println("Is the light on? : " + lightBulb.isAcesa());
         lightBulb.turnOff();
     }
 }
