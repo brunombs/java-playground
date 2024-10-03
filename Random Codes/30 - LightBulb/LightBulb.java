@@ -18,16 +18,16 @@ public class LightBulb {
         return cor;
     }
 
-    public boolean isAcesa() {
+    public boolean isOn() {
         return acesa;
     }
 
     public static void main(String[] args) {
-        LightBulb lightBulb = new LightBulb("Branco");
-        System.out.println("Is the light on? : " + lightBulb.isAcesa());
+        LightBulb lightBulb = new LightBulb("white");
+        System.out.println("Is the light on? : " + lightBulb.isOn());
         lightBulb.turnOn();
-        System.out.println(lightBulb.getCor());
-        System.out.println("Is the light on? : " + lightBulb.isAcesa());
+        System.out.println("Color light: " + lightBulb.getCor());
+        System.out.println("Is the light on? : " + lightBulb.isOn());
         lightBulb.turnOff();
     }
 }
