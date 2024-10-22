@@ -1,3 +1,5 @@
+// Write a Java program that throws an exception and catch it using a try-catch block.
+
 import java.util.Scanner;
 
 public class ExceptionArray {
