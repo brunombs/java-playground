@@ -9,7 +9,7 @@ public static void main(String[] args) {
         case "helicopter" -> "It's a helicopter.";
         case "" -> "It's null or empty!";
         default -> "Unknown type!";
-    }; test
+    };
 
     System.out.println(result);
 }
