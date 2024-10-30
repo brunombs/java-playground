@@ -22,6 +22,8 @@ public class ExpressOrder extends Order{
                 "Order number: " + getOrderNumber() +
                 "\nDelivery time: " + getDeliveryTime() +
                 " days \nTotal value: " + getTotalValue()
-                + "$\n--------------------------";
+                + "$\n" +
+                "Express Fee: " + getExpressFee() +
+                "\n--------------------------";
     }
 }
