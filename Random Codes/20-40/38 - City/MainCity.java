@@ -5,7 +5,11 @@ public class MainCity {
         City Curitiba = new City("Curitiba", 1948626, 4349, "Paraná", true);
         City Campinas = new City("Campinas", 1223237, 7953, "São Paulo", false);
 
-        System.out.println("City name: " + Salvador.getName() + "\nPopulation: " + Salvador.getPopulation() + "\nArea: " + Salvador.getArea() + "\nState: " + Salvador.getState() + "\nIs capital? " + Salvador.isCapital());
-        System.out.println("-------------------");
+        City[] cities = {Salvador, SP, Curitiba, Campinas};
+
+        for (City city : cities) {
+            System.out.println("City name: " + city.getName() + "\nPopulation: " + city.getPopulation() + "\nArea: " + city.getArea() + "\nState: " + city.getState() + "\nIs capital? " + city.isCapital());
+            System.out.println("-------------------");
+        }
     }
 }
