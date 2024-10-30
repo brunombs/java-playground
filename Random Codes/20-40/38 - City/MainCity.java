@@ -10,6 +10,8 @@ public static void main(String[] args) {
     City[] cities = {Salvador, SP, Curitiba, Campinas};
     NumberFormat numberFormat = NumberFormat.getInstance(new Locale("pt", "BR"));
 
+
+
     for (City city : cities) {
         String formattedPopulation = numberFormat.format(city.getPopulation());
         System.out.println("City name: " + city.getName() + "\nPopulation: " + formattedPopulation + "\nArea: " + city.getArea() + "\nState: " + city.getState() + "\nIs capital? " + city.isCapital());
