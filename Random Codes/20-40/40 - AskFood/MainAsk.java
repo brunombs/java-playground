@@ -23,8 +23,8 @@ public static void main(String[] args) {
         }
 
         System.out.println("Meal Order " + (i + 1) + ":");
-        System.out.println("Contains: " + mealOrders[i].getFoodItems().get(0).getName() +
-                " and " + mealOrders[i].getBeverageItems().get(0).getName());
+        System.out.println("Contains: " + mealOrders[i].getFoodItems().getFirst().getName() +
+                " and " + mealOrders[i].getBeverageItems().getFirst().getName());
         System.out.println("Total Price: " + mealOrders[i].calculateTotalPrice());
         System.out.println("Total Calories: " + mealOrders[i].calculateTotalCalories());
 
