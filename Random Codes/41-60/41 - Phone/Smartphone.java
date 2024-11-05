@@ -1,6 +1,6 @@
 public class Smartphone extends Cellphone {
-    private String os;
-    private int storage;
+    private final String os;
+    private final int storage;
 
     public Smartphone(String brand, String model, double batteryDuration, String os, int storage) {
         super(brand, model, batteryDuration);

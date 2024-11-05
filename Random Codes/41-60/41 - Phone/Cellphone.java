@@ -1,7 +1,7 @@
 public class Cellphone {
-    private String brand;
-    private String model;
-    private double batteryDuration;
+    private final String brand;
+    private final String model;
+    private final double batteryDuration;
 
     public Cellphone(String brand, String model, double batteryDuration) {
         this.brand = brand;
