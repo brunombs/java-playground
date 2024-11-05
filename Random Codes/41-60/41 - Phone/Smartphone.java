@@ -1,4 +1,4 @@
-public class Smartphone extends CellPhone {
+public class Smartphone extends Cellphone {
     private String os;
     private int storage;
 
