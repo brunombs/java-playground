@@ -1,4 +1,4 @@
-public static void main(String[] ignoredArgs) {
+public static void main() {
     Scanner scanner = new Scanner(System.in);
     ArrayList<Cellphone> phones = new ArrayList<>();
 
