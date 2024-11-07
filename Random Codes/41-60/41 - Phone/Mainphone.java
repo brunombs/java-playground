@@ -4,7 +4,19 @@ public static void main(String[] args) {
 
     while (true) {
         System.out.println("Enter phone type (1 for CellPhone, 2 for SmartPhone, 0 to exit): ");
-        int choice = scanner.nextInt();
+        int choice = -1;
+
+        while (choice != 0 && choice != 1 && choice != 2) {
+            if (scanner.hasNextInt()) {
+                choice = scanner.nextInt();
+                if (choice != 0 && choice != 1 && choice != 2) {
+                    System.out.println("Invalid choice. Please enter 1 for CellPhone, 2 for SmartPhone, or 0 to exit.");
+                }
+            } else {
+                System.out.println("Invalid input. Please enter a valid number (1, 2, or 0): ");
+                scanner.next();
+            }
+        }
         scanner.nextLine();
 
         if (choice == 0) {
@@ -39,6 +51,4 @@ public static void main(String[] args) {
         phone.displayInfo();
         System.out.println();
     }
-
-    scanner.close();
 }
