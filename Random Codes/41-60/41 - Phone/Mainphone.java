@@ -34,7 +34,7 @@ public static void main(String[] args) {
         if (choice == 1) {
             Cellphone phone = new Cellphone(brand, model, batteryDuration);
             phones.add(phone);
-        } else if (choice == 2) {
+        } else {
             System.out.println("Enter operating system: ");
             String os = scanner.nextLine();
             System.out.println("Enter storage (in GB): ");
