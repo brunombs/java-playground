@@ -2,9 +2,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class TheGuessGame {
-    private final int numberToGuess;
+    private int numberToGuess;
     private int numberOfTries;
     private boolean hasWon;
+    private final int maxTries = 10;
 
     public TheGuessGame() {
         Random rand = new Random();
@@ -18,7 +19,7 @@ public class TheGuessGame {
         System.out.println("Welcome to the guessing game");
         System.out.println("Please enter your number to guess (between 0-100): ");
 
-        while (!hasWon) {
+        while (!hasWon && numberOfTries < maxTries) {
             System.out.println("Write your guess");
             int guess = input.nextInt();
             numberOfTries++;
@@ -27,13 +28,15 @@ public class TheGuessGame {
                 hasWon = true;
                 System.out.println("You guessed the number " + numberToGuess);
                 System.out.println("You used " + numberOfTries + " tries");
-            }
-            else if (guess < numberToGuess) {
+            } else if (guess < numberToGuess) {
                 System.out.println("Your guess is too low");
-            }
-            else {
+            } else {
                 System.out.println("Your guess is too high");
             }
+        }
+
+        if (!hasWon) {
+            System.out.println("Game Over! You've used all " + maxTries + " tries. The number was " + numberToGuess);
         }
     }
 
