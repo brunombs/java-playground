@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class TheGuessGame {
-    private int numberToGuess;
+    private final int numberToGuess;
     private int numberOfTries;
     private boolean hasWon;
 
