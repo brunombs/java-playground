@@ -2,7 +2,7 @@
 
 Bem-vindo ao meu Java Playground! 🎉
 
-Este repositório é um espaço onde compartilho exemplos e exercícios em Java que estou desenvolvendo para aprimorar minhas habilidades na linguagem. A maioria dos exercícios é inspirada no site [W3Resource Java Exercises](https://www.w3resource.com/java-exercises/index.php), mas também incluo códigos experimentais que crio enquanto exploro novas ideias e conceitos.
+Este repositório é um espaço onde compartilho exemplos e exercícios em Java que estou desenvolvendo para aprimorar minhas habilidades na linguagem. Incluo códigos experimentais que crio enquanto exploro novas ideias e conceitos.
 
 ## Objetivos do Repositório
 
@@ -21,6 +21,6 @@ Se você tiver sugestões, correções ou ideias para novos exercícios, sinta-s
 
 ## Licença
 
-Este projeto está sob a licença [MIT](LICENSE).
+Este projeto está sob a licença MIT.
 
 Obrigado por visitar! Espero que você encontre inspiração e aprendizado aqui. 😊
