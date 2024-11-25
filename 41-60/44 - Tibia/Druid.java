@@ -1,7 +1,7 @@
 public class Druid extends Vocation {
 
     public Druid(int level, boolean promoted) {
-        super(calculateLifePoints(level), calculateManaPoints(level), level, promoted);
+        super(calculateLifePoints(level), calculateManaPoints(level), level, calculateCapacity(level), promoted);
         this.vocation = getVocation(promoted);
     }
 
@@ -23,5 +23,11 @@ public class Druid extends Vocation {
         int baseManaPoints = 35;
         int manaIncrement = 30;
         return baseManaPoints + (level - 8) * manaIncrement;
+    }
+
+    private static int calculateCapacity(int level) {
+        int baseCapacity = 470;
+        int capacityIncrement = 10;
+        return baseCapacity + (level - 8) * capacityIncrement;
     }
 }
