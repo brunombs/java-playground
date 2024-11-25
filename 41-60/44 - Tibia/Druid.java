@@ -7,7 +7,7 @@ public class Druid extends Vocation {
 
     @Override
     protected int calculateLifePoints(int level) {
-        int baseLifePoints = 185;  // Ajustado para o Druid
+        int baseLifePoints = 185;
         int lifeIncrement = 5;
         return baseLifePoints + (level - 8) * lifeIncrement;
     }
