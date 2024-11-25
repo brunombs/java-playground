@@ -1,11 +1,15 @@
 // improvements:
 // set initial hp and mp 185/35 for level 8
 // ask level and define hp and mp for that level
-// ask if it's promoted and if so update the vocation name
+// ref: http://tutoriais.mundotibiabr.com/2008/04/tudo-sobre-vocaes.html
+// add oz capacity
+
 
 public class Main {
     public static void main(String[] args) {
-        Druid druid = new Druid(185, 35, 8);
-        druid.printDetails("Druid");
+        Druid druid = new Druid(185, 35, 8, true);
+        druid.printDetails();
+        Druid druid2 = new Druid(185, 35, 8, false);
+        druid2.printDetails();
     }
 }
