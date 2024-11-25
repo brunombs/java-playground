@@ -12,12 +12,8 @@ public class Vocation {
         this.promoted = promoted;
     }
 
-    void isPromoted() {
-        System.out.println("Vocation");
-    }
-
-
     public void printDetails() {
+        System.out.println("----------CHARACTER INFO----------");
         System.out.println("Vocation: " + vocation);
         System.out.println("Life Points: " + lifePoints);
         System.out.println("Mana Points: " + manaPoints);
