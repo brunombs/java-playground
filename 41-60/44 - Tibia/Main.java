@@ -5,11 +5,9 @@
 // add oz capacity (initial = 470oz, mage+10, rp+20, ek+25)
 
 
-public class Main {
-    public static void main(String[] args) {
-        Druid druid = new Druid(10, true);
-        druid.printDetails();
-        Druid druid2 = new Druid(8, false);
-        druid2.printDetails();
-    }
+public static void main(String[] args) {
+    Druid druid = new Druid(130, true);
+    druid.printDetails();
+    Druid druid2 = new Druid(8, false);
+    druid2.printDetails();
 }
