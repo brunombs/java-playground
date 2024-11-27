@@ -1,5 +1,5 @@
 public class CryptoAccount {
-    private int accountID;
+    private final int accountID;
     private double BTCbalance;
     private double ETHbalance;
 
@@ -17,15 +17,10 @@ public class CryptoAccount {
         ETHbalance += amount;
     }
 
-    public int getAccountID() {
-        return accountID;
-    }
-
-    public double getBTCbalance() {
-        return BTCbalance;
-    }
-
-    public double getETHbalance() {
-        return ETHbalance;
+    public void printDetails(){
+        System.out.println("-----ACCOUNT DETAILS-----");
+        System.out.println("Account ID: " + accountID);
+        System.out.println("Bitcoin balance: " + BTCbalance);
+        System.out.println("ETH balance: " + ETHbalance);
     }
 }
