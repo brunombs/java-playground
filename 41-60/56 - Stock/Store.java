@@ -14,11 +14,10 @@ public class Store {
             balance += item.getPrice() * quantity;
             item.reduceQuantity(quantity);
             if (quantity > 1){
-                System.out.println("Sold " + quantity + " " + item.getName() + "s");
-                System.out.println("Store balance: " + getBalance());
+                System.out.println("Item sold: " + item.getName());
+                System.out.println("Quantitiy of items sold: " + quantity);
             } else {
-                System.out.println("Sold " + quantity + " " + item.getName());
-                System.out.println("Store balance: " + getBalance());
+                System.out.println("One " + item.getName() + " sold");
             }
         } else {
             System.out.println("Out of stock: " + item.getName());
