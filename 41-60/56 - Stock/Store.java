@@ -16,8 +16,10 @@ public class Store {
             if (quantity > 1){
                 System.out.println("Item sold: " + item.getName());
                 System.out.println("Quantitiy of items sold: " + quantity);
+                item.getDetails();
             } else {
                 System.out.println("One " + item.getName() + " sold");
+                item.getDetails();
             }
         } else {
             System.out.println("Out of stock: " + item.getName());
