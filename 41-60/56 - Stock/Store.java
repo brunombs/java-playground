@@ -18,7 +18,6 @@ public class Store {
             } else {
                 System.out.println("Sold " + quantity + " " + item.getName());
             }
-            System.out.println("Sold " + quantity + " " + item.getName());
         } else {
             System.out.println("Out of stock: " + item.getName());
         }
