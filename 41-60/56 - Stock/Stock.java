@@ -21,16 +21,20 @@ public class Stock {
         return price;
     }
 
-    public void reduceQuantity() {
-        if (quantity > 0) {
+    public void reduceQuantity(int quantity) {
+        if (this.quantity >= quantity) {
             quantity --;
+        } else {
+            System.out.println("Out of stock");
         }
     }
 
     public void getDetails() {
+        System.out.println("----------PRODUCT DETAILS----------");
         System.out.println("Product name: " + name);
         System.out.println("Product quantity: " + quantity);
         System.out.println("Product price: " + price);
+        System.out.println("-----------------------------------");
     }
 
 }

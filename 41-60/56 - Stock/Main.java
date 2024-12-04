@@ -6,10 +6,10 @@ public class Main {
         Stock appleWatch = new Stock("Apple Watch", 8, 399);
         System.out.println("Store balance: " + myStore.getBalance());
         iphone.getDetails();
-        macbook.getDetails();
-        appleWatch.getDetails();
+        //macbook.getDetails();
+        //appleWatch.getDetails();
 
-        myStore.sell(iphone);
+        myStore.sell(iphone, 10);
         iphone.getDetails();
         System.out.println("Store balance: " + myStore.getBalance());
 

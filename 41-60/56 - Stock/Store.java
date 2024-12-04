@@ -9,11 +9,16 @@ public class Store {
         return balance;
     }
 
-    public void sell (Stock item){
-        if(item.getQuantity() > 0){
-            balance += item.getPrice();
-            item.reduceQuantity();
-            System.out.println("Sold one " + item.getName());
+    public void sell (Stock item, int quantity){
+        if(item.getQuantity() > quantity){
+            balance += item.getPrice() * quantity;
+            item.reduceQuantity(quantity);
+            if (quantity > 1){
+                System.out.println("Sold " + quantity + " " + item.getName() + "s");
+            } else {
+                System.out.println("Sold " + quantity + " " + item.getName());
+            }
+            System.out.println("Sold " + quantity + " " + item.getName());
         } else {
             System.out.println("Out of stock: " + item.getName());
         }
