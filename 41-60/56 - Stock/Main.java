@@ -9,7 +9,7 @@ public class Main {
         //macbook.getDetails();
         //appleWatch.getDetails();
 
-        myStore.sell(iphone, 10);
+        myStore.sell(iphone, 1);
         iphone.getDetails();
         System.out.println("Store balance: " + myStore.getBalance());
 

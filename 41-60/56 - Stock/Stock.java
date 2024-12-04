@@ -23,7 +23,7 @@ public class Stock {
 
     public void reduceQuantity(int quantity) {
         if (this.quantity >= quantity) {
-            quantity --;
+            this.quantity -= quantity;
         } else {
             System.out.println("Out of stock");
         }
