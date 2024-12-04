@@ -11,8 +11,7 @@ public class City {
         System.out.println("Let's play a guessing game!");
         System.out.println("""
                 Game rules:
-                -> You have 3 attempts.
-                -> You need to guess in which city the creator of this game was born.
+                -> You have 3 attempts to guess in which city the creator of this game was born.
                 """);
         System.out.println("Here's the list of cities: " + Arrays.toString(cities));
 
@@ -20,17 +19,20 @@ public class City {
             System.out.print("Make a guess: ");
             String guess = scanner.nextLine();
 
-            if (guess.equalsIgnoreCase(myCity)) {
+            if (guess.equalsIgnoreCase(myCity) && attempts == 1) {
+                System.out.println("Congratulations! You guessed it right on your last attempt.");
+                break;
+            } else if (guess.equalsIgnoreCase(myCity)) {
                 System.out.println("Congratulations! You guessed it right! You still had " + attempts + " attempts remaining.");
                 break;
             } else {
                 attempts--;
                 if (attempts == 1) {
-                    System.out.println("Try again! That's your last guess.");
+                    System.out.println("Try again! This is your last guess.");
                 } else if (attempts > 0) {
                     System.out.println("Try again! You have " + attempts + " attempts remaining.");
                 } else {
-                    System.out.println("Sorry, you've run out of attempts. Game over!");
+                    System.out.println("Sorry, you've run out of attempts. Better luck next time!");
                 }
             }
         }
