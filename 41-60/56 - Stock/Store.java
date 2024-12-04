@@ -15,7 +15,7 @@ public class Store {
             item.reduceQuantity(quantity);
             if (quantity > 1){
                 System.out.println("Item sold: " + item.getName());
-                System.out.println("Quantitiy of items sold: " + quantity);
+                System.out.println("Quantity of items sold: " + quantity);
                 item.getDetails();
             } else {
                 System.out.println("One " + item.getName() + " sold");
