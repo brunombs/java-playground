@@ -9,29 +9,30 @@ public class Main {
         contacts.add(new Contact("Bruno", 12345));
         contacts.add(new Contact("Julia", 54321));
 
-        System.out.println("""
+        while (true){
+            System.out.println("""
                 What do you want to do?
                 Type 1 for: 'Show contacts'
-                Type 2 for: 'Add contacts'
-                Type 3 for: 'Remove contacts'
-                Type 4 for: 'Search contacts'""");
+                Type 2 for: 'Add contact'""");
 
-        String answer = scanner.nextLine();
+            String answer = scanner.nextLine();
 
-        if (answer.equals("1")) {
-            System.out.println("Here are your contacts: ");
-            for (Contact contact : contacts) {
-                System.out.println(contact.getName() + ", number: " + contact.getNumber());
+            if (answer.equals("1")) {
+                System.out.println("Here are your contacts: ");
+                for (Contact contact : contacts) {
+                    System.out.println(contact.getName() + ", number: " + contact.getNumber());
+                }
+            } else if (answer.equals("2")) {
+                System.out.println("Input name and phone number of the contact you want to add separated by a comma: ");
+                String nameAndNumber = scanner.nextLine();
+                String[] parts = nameAndNumber.split(",");
+                String name = parts[0];
+                int phone = Integer.parseInt(parts[1]);
+                contacts.add(new Contact(name, phone));
+            } else {
+                System.out.println("Invalid input!");
+                break;
             }
-        } else if (answer.equals("2")) {
-            System.out.println("Input name and phone number separated by a comma: ");
-            String nameAndNumber = scanner.nextLine();
-            String[] parts = nameAndNumber.split(",");
-            String name = parts[0];
-            int phone = Integer.parseInt(parts[1]);
-            contacts.add(new Contact(name, phone));
-        } else {
-            System.out.println("Invalid input!");
         }
     }
 }
