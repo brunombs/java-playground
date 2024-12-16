@@ -1,6 +1,6 @@
 public class Contact {
-    private String name;
-    private int number;
+    private final String name;
+    private final int number;
 
     public Contact(String name, int number) {
         this.name = name;
