@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<String[]> content = new ArrayList<>();
 
-        try (Scanner scanner = new Scanner(Paths.get("41-60/vocations.txt"))) {  // Caminho relativo
+        try (Scanner scanner = new Scanner(Paths.get("41-60/vocations.txt"))) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 String[] tokens = line.split(",");
