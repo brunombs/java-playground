@@ -1,0 +1,4 @@
+druid,elder druid
+sorcerer,master sorcerer
+paladin,royal paladin
+knight,elite knight
