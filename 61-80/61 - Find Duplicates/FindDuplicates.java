@@ -9,8 +9,8 @@ public class FindDuplicates {
 
         System.out.println("Duplicate elements:");
         for (int i = 0; i < array.length; i++) {
-            for (int nextI = i + 1; nextI < array.length; nextI++) {
-                if (array[i] == array[nextI]) {
+            for (int nextIndex = i + 1; nextIndex < array.length; nextIndex++) {
+                if (array[i] == array[nextIndex]) {
                     duplicate.add(array[i]);
                 }
             }
