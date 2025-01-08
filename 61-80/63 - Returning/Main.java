@@ -1,5 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Welcome 2025 :PP");
+        int year = 0;
+        while (year <= 2025) {
+            System.out.println("Welcome " + year + " :P");
+            year++;
+        }
+
     }
 }
