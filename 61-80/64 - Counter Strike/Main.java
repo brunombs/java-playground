@@ -5,11 +5,12 @@ public class Main {
         Scanner input = new Scanner(System.in);
         System.out.println("Would you like to play as a CT or Terror?");
         String team = input.nextLine();
-        if (team.equals("CT")) {
-            System.out.println("You're playing as a CT");
+        if (team.equalsIgnoreCase("CT")) {
+            System.out.println("You're playing as CT");
+        } else if (team.equalsIgnoreCase("Terror")) {
+            System.out.println("You're playing as Terror");
         } else {
-            System.out.println("You're playing as a Terror");
+            System.out.println("Invalid option. Please choose either CT or Terror.");
         }
-
     }
 }
