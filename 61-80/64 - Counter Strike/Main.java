@@ -12,5 +12,8 @@ public class Main {
         } else {
             System.out.println("Invalid option. Please choose either CT or Terror.");
         }
+
+        System.out.println("Would you like to play against real players or bots?");
+        String oponentTeam = input.nextLine();
     }
 }
