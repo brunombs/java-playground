@@ -1,8 +1,10 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        Random random = new Random();
 
         System.out.println("Would you like to play as a CT or Terror?");
         String team = input.nextLine();
@@ -29,6 +31,13 @@ public class Main {
             System.out.println("The first round is a normal round.");
         }
 
+        System.out.println("Do you want to input the results manually or let the game be automatic? (manual/auto)");
+        String gameMode = input.nextLine();
+        while (!gameMode.equalsIgnoreCase("manual") && !gameMode.equalsIgnoreCase("auto")) {
+            System.out.println("Invalid option. Please choose either manual or auto.");
+            gameMode = input.nextLine();
+        }
+
         while (round <= 30 && ctPoints < 16 && terrorPoints < 16) {
             System.out.println("\nRound " + round + " - CT: " + ctPoints + " | Terror: " + terrorPoints);
 
@@ -38,12 +47,18 @@ public class Main {
                 System.out.println("This is a normal round.");
             }
 
-            System.out.println("Who won this round? (CT or Terror) or type 'exit' to end the game.");
-            String roundWinner = input.nextLine();
+            String roundWinner;
+            if (gameMode.equalsIgnoreCase("manual")) {
+                System.out.println("Who won this round? (CT or Terror) or type 'exit' to end the game.");
+                roundWinner = input.nextLine();
 
-            if (roundWinner.equalsIgnoreCase("exit")) {
-                System.out.println("Connection failed. Game finished.");
-                break;
+                if (roundWinner.equalsIgnoreCase("exit")) {
+                    System.out.println("Connection failed. Game finished.");
+                    break;
+                }
+            } else {
+                roundWinner = random.nextBoolean() ? "CT" : "Terror";
+                System.out.println("The winner of this round is: " + roundWinner);
             }
 
             if (roundWinner.equalsIgnoreCase("CT")) {
