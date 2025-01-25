@@ -38,8 +38,13 @@ public class Main {
                 System.out.println("This is a normal round.");
             }
 
-            System.out.println("Who won this round? (CT or Terror)");
+            System.out.println("Who won this round? (CT or Terror) or type 'exit' to end the game.");
             String roundWinner = input.nextLine();
+
+            if (roundWinner.equalsIgnoreCase("exit")) {
+                System.out.println("Connection failed. Game finished.");
+                break;
+            }
 
             if (roundWinner.equalsIgnoreCase("CT")) {
                 ctPoints++;
@@ -53,13 +58,15 @@ public class Main {
             round++;
         }
 
-        System.out.println("\nFinal Score - CT: " + ctPoints + " | Terror: " + terrorPoints);
-        if (ctPoints == 16) {
-            System.out.println("CT Wins!");
-        } else if (terrorPoints == 16) {
-            System.out.println("Terror Wins!");
-        } else {
-            System.out.println("It's a draw!");
+        if (round > 30 || ctPoints == 16 || terrorPoints == 16) {
+            System.out.println("\nFinal Score - CT: " + ctPoints + " | Terror: " + terrorPoints);
+            if (ctPoints == 16) {
+                System.out.println("CT Wins!");
+            } else if (terrorPoints == 16) {
+                System.out.println("Terror Wins!");
+            } else {
+                System.out.println("It's a draw!");
+            }
         }
     }
 }
