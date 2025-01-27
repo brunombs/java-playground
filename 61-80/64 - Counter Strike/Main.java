@@ -7,6 +7,11 @@ public class Main {
         Random random = new Random();
         boolean playAgain = true;
 
+        int totalMatches = 0;
+        int ctWins = 0;
+        int terrorWins = 0;
+        int draws = 0;
+
         while (playAgain) {
             System.out.println("Would you like to play as a CT or Terror?");
             String team = input.nextLine();
@@ -75,18 +80,21 @@ public class Main {
                 round++;
             }
 
-            if (round > 30 || ctPoints == 16 || terrorPoints == 16) {
-                System.out.println("\nFinal Score - CT: " + ctPoints + " | Terror: " + terrorPoints);
-                if (ctPoints == 16) {
-                    System.out.println("CT Wins!");
-                } else if (terrorPoints == 16) {
-                    System.out.println("Terror Wins!");
-                } else {
-                    System.out.println("It's a draw!");
-                }
+            if (ctPoints == 16) {
+                System.out.println("CT Wins!");
+                ctWins++;
+            } else if (terrorPoints == 16) {
+                System.out.println("Terror Wins!");
+                terrorWins++;
+            } else {
+                System.out.println("It's a draw!");
+                draws++;
             }
+            totalMatches++;
 
-            System.out.println("Do you want to play another match? (yes/no)");
+            System.out.println("\nFinal Score - CT: " + ctPoints + " | Terror: " + terrorPoints);
+
+            System.out.println("\nDo you want to play another match? (yes/no)");
             String playAgainInput = input.nextLine();
             while (!playAgainInput.equalsIgnoreCase("yes") && !playAgainInput.equalsIgnoreCase("no")) {
                 System.out.println("Invalid option. Please choose either yes or no.");
@@ -97,5 +105,11 @@ public class Main {
                 playAgain = false;
             }
         }
+
+        System.out.println("\n=== Total Results ===");
+        System.out.println("Total matches played: " + totalMatches);
+        System.out.println("CT victories: " + ctWins);
+        System.out.println("Terror victories: " + terrorWins);
+        System.out.println("Draws: " + draws);
     }
 }
