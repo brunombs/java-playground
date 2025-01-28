@@ -24,6 +24,7 @@ public class Main {
             int ctPoints = 0;
             int terrorPoints = 0;
             int round = 1;
+            boolean knifeRoundWonByCT = false;
 
             System.out.println("Is the first round a knife round? (yes/no)");
             String knifeRound = input.nextLine();
@@ -34,6 +35,19 @@ public class Main {
 
             if (knifeRound.equalsIgnoreCase("yes")) {
                 System.out.println("The first round is a knife round! Only knives are allowed.");
+                System.out.println("Who won the knife round? (CT or Terror)");
+                String knifeRoundWinner = input.nextLine();
+                while (!knifeRoundWinner.equalsIgnoreCase("CT") && !knifeRoundWinner.equalsIgnoreCase("Terror")) {
+                    System.out.println("Invalid option. Please choose either CT or Terror.");
+                    knifeRoundWinner = input.nextLine();
+                }
+
+                if (knifeRoundWinner.equalsIgnoreCase("CT")) {
+                    knifeRoundWonByCT = true;
+                    System.out.println("CT won the knife round and gets a 10% chance advantage.");
+                } else {
+                    System.out.println("Terror won the knife round and gets a 10% chance advantage.");
+                }
             } else {
                 System.out.println("The first round is a normal round.");
             }
@@ -64,7 +78,16 @@ public class Main {
                         break;
                     }
                 } else {
-                    roundWinner = random.nextBoolean() ? "CT" : "Terror";
+                    double ctWinProbability = 0.5;
+                    if (knifeRound.equalsIgnoreCase("yes")) {
+                        if (knifeRoundWonByCT) {
+                            ctWinProbability += 0.1;
+                        } else {
+                            ctWinProbability -= 0.1;
+                        }
+                    }
+
+                    roundWinner = random.nextDouble() < ctWinProbability ? "CT" : "Terror";
                     System.out.println("The winner of this round is: " + roundWinner);
                 }
 
