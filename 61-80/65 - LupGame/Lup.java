@@ -7,8 +7,17 @@ public class Lup {
         Random random = new Random();
 
         System.out.println("Enter the number of players:");
-        int numPlayers = sc.nextInt();
-        sc.nextLine();
+        int numPlayers;
+        while (true) {
+            if (sc.hasNextInt()) {
+                numPlayers = sc.nextInt();
+                sc.nextLine();
+                break;
+            } else {
+                System.out.println("Invalid input. Enter a valid number:");
+                sc.next();
+            }
+        }
 
         String[] players = new String[numPlayers];
         for (int i = 0; i < numPlayers; i++) {
@@ -22,7 +31,16 @@ public class Lup {
         while (!guessedCorrectly) {
             for (String player : players) {
                 System.out.println(player + ", enter your guess (1-100):");
-                int guess = sc.nextInt();
+                int guess;
+                while (true) {
+                    if (sc.hasNextInt()) {
+                        guess = sc.nextInt();
+                        break;
+                    } else {
+                        System.out.println("Invalid input. Enter a valid number:");
+                        sc.next();
+                    }
+                }
 
                 if (guess == secretNumber) {
                     System.out.println("Congratulations, " + player + "! You guessed the number!");
