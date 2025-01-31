@@ -37,7 +37,7 @@ public class Lup {
                         guess = sc.nextInt();
                         break;
                     } else {
-                        System.out.println("Invalid input. Enter a valid number:");
+                        System.out.println("Invalid input, " + player + ". Enter a valid number:");
                         sc.next();
                     }
                 }
