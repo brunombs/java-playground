@@ -1,23 +1,15 @@
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Main {
     public static void main(String[] args) {
-        List<String> cities = new ArrayList<>();
-        cities.add("New York");
-        cities.add("Tokyo");
-        cities.add("Paris");
-        cities.add("London");
-        cities.add("Sydney");
-        cities.add("Rome");
-        cities.add("Berlin");
-        cities.add("Dubai");
-        cities.add("Barcelona");
-        cities.add("Cape Town");
+        List<String> cities = List.of(
+                "New York", "Tokyo", "Paris", "London", "Sydney",
+                "Rome", "Berlin", "Dubai", "Barcelona", "Cape Town"
+        );
 
-        Random random = new Random();
-        int randomIndex = random.nextInt(cities.size());
+        int randomIndex = ThreadLocalRandom.current().nextInt(cities.size());
+
         System.out.println("You should visit: " + cities.get(randomIndex));
     }
 }
